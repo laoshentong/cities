@@ -5,9 +5,9 @@ List of roads is available in a file.
 
 File contains a list of city pairs (one pair per line, comma separated), which indicates that there’s a road between those cities.
 
-download project and run maven to build: mvn clean install
+Download project and run maven to build: mvn clean install
 
-execute app: java -jar target/cities-0.0.1-SNAPSHOT.jar
+Execute app: java -jar target/cities-0.0.1-SNAPSHOT.jar
              or mvn spring-boot:run
 
 It will be deployed as a spring-boot app and expose one endpoint:
