@@ -1,0 +1,52 @@
+swagger: '2.0'
+info:
+  title: Cities Connection
+  description: Find if two cities are connected
+  version: 1.0
+  contact:
+    name: Ting Li
+paths:
+  /connected:
+    get:
+      description: 
+        check if two cities are connected or not.
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: search is done successfully
+        '400':
+          description: Bad request
+        '500':
+          description: Server error
+          schema:
+            $ref: '#/definitions/Error'
+definitions:
+  Error:
+    type: object
+    description: An object representing an error state.
+    required:
+      - id
+      - severity
+    properties:
+      id:
+        type: string
+        enum:
+          - CITIES_SERVICE_ERROR
+          - UNKNOWN_ERROR
+        description: |
+          Code indicating the nature of the error. 
+            * "CITIES_SERVICE_ERROR" indicates an issue when reading or retrieving connections between cities.
+            * "UNKNOWN_ERROR" indicates an unknown error.
+      severity:
+        type: string
+        enum:
+          - SEVERE
+          - WARNING
+        description: An indicator of the severity of the error.
+      message:
+        type: string
+        description: Description of the error.
+        
