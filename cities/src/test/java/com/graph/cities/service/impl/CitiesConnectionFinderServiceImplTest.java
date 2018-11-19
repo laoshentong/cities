@@ -21,13 +21,11 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
-import org.springframework.test.context.TestPropertySource;
 
 import com.graph.cities.configuration.CitiesConfiguration;
 import com.graph.cities.exceptions.InvalidRequestException;
 import com.graph.cities.util.CitiesConnectionUtil;
 
-@TestPropertySource(properties = { "com.graph.cities.algorithm = BFS" })
 public class CitiesConnectionFinderServiceImplTest {
 	
 	@Mock
@@ -53,17 +51,6 @@ public class CitiesConnectionFinderServiceImplTest {
 		MockitoAnnotations.initMocks(this);
 		
 	}
-	
-	private CitiesConfiguration initConfig() {
-		CitiesConfiguration citiesConfiguration = new CitiesConfiguration();
-		return citiesConfiguration;//citiesConfiguration.setAlgorithm("DFS"); 
-	}
-	
-	private CitiesConnectionUtil initUtil() {
-		citiesConnectionUtil= new CitiesConnectionUtil();
-		return citiesConnectionUtil;
-	}
-	
 	
 	@Test
 	public void testIsConnectedFalseWithBFS() throws IOException {
