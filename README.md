@@ -1,13 +1,14 @@
 # cities
 Spring boot app which determines if two cities are connected.  Two cities are considered connected if there’s a series of roads that can be traveled from one city to another. 
 
-download project and run maven to build: mvn clean install
-
-execute app: java -jar target/cities-0.0.1-SNAPSHOT.jar
-
 List of roads is available in a file.
 
 File contains a list of city pairs (one pair per line, comma separated), which indicates that there’s a road between those cities.
+
+download project and run maven to build: mvn clean install
+
+execute app: java -jar target/cities-0.0.1-SNAPSHOT.jar
+             or mvn spring-boot:run
 
 It will be deployed as a spring-boot app and expose one endpoint:
 
