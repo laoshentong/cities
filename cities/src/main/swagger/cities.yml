@@ -2,7 +2,7 @@ swagger: '2.0'
 info:
   title: Cities Connection
   description: Find if two cities are connected
-  version: 1.0
+  version: '1.0'
   contact:
     name: Ting Li
 paths:
